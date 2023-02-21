@@ -7,9 +7,7 @@ namespace ProjectASP.Controllers
     {
         public IActionResult Index()
         {
-            CustomerReader reader=new CustomerReader();
-            reader.GetCustomers();
-            System.Console.WriteLine("");
+            
             return View("Index");
         }
     }

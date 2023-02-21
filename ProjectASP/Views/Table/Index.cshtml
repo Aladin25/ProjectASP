@@ -1,0 +1,63 @@
+﻿@model List<ProjectASP.Models.Customer>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+    <form method="get" action="@Url.Action("Index", "Table")">
+        @*<div>
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search" />
+            <button type="submit">Search</button>
+        </div>*@
+        <div>
+            <label for="filter">Filter by city:</label>
+            <select id="filter" name="filter">
+                <option value="">-- All --</option>
+                <option value="Toronto">Toronto</option>
+                <option value="London">London</option>
+                <option value="Chicago">Chicago</option>
+            </select>
+            <button type="submit">Filter</button>
+        </div>
+    </form>
+    <br />
+    <table id="customers-table">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>MiddleName</th>
+                <th>LastName</th>
+                <th>Suffix</th>
+                <th>CompanyName</th>
+                <th>AddressLine</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.FirstName</td>
+                    <td>@customer.MiddleName</td>
+                    <td>@customer.LastName</td>
+                    <td>@customer.Suffix</td>
+                    <td>@customer.CompanyName</td>
+                    <td>@customer.AddressLine</td>
+                    <td>@customer.City</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <script>
+        $(document).ready(function () {
+            $('#customers-table').DataTable();
+        });
+    </script>
+</body>
+</html>
