@@ -8,27 +8,71 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <style>
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+            .btn:hover {
+                background-color: #0062cc;
+            }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <a href="/Table/Index" class="btn btn-primary">To Table</a>
-    <a href="/Grafic/Index" class="btn btn-primary">To Grafic</a>
+    <a href="/Table/Index" class="btn">
+        <img src="https://finsoft.ua/files/uploads/Tablici_v_BAS/Tab_0.png" alt="Table Image">
+        <br>
+        To Table
+    </a>
+    <a href="/Grafic/Index" class="btn">
+        <img src="https://sun9-36.userapi.com/impg/g6d0NMo0MPFdepQownICL2BRLEqb-Z3veUnqCg/oBAbKox66gM.jpg?size=600x275&quality=96&sign=e71f23be04a108086c8909821893aa22&type=album" alt="Grafic Image">
+        <br>
+        To Grafic
+    </a>
     <p>
-        Опис Програми
+        Опис Програми:
+    </p>
+    <p>
+       Програма на ASP.NET використовує базу даних магазину, щоб зберігати дані про клієнтів і міста.
+    </p>
+    <p>
+       Програма відображає таблицю клієнтів з бази даних, що містить дані про ім'я клієнта, адресу  та місто.
+    </p>
+    <p>
+       Крім того, програма показує графіки, які відображають кількість клієнтів, зареєстрованих в магазині, для кожного міста.
+    </p>
+    <p>
+       Графіки можуть допомогти зрозуміти, які міста є найбільш популярними серед клієнтів магазину.
     </p>
     Опис Бази данних:
     <p>
-
         AdventureWorksLT2019 містить дані про продукти, клієнтів, замовлення та співробітників компанії, яка продає електронні товари.
     </p>
     <p>
         В базі даних є таблиці для продуктів, замовлень, платежів, адрес, контактної інформації клієнтів та багато іншого.
- </p>
+    </p>
     <p>
         Ці дані можуть бути використані для вивчення та виконання запитів на SQL, що стосуються різних аспектів діяльності компанії.
     </p>
     <p>
-        <a href="https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak">Download DataBase</a>
+        <a href="https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak" class="btn">
+            <img src="https://www.freeiconspng.com/thumbs/github-icon/github-icon-14.png" alt="Git Image">
+        <br>
+            Download DataBase
+    </a>
+        
     </p>
-
 </body>
 </html>
